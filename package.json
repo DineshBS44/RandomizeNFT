@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "images": "^3.2.3",
+    "nft.storage": "^5.0.0",
+    "node-fetch": "^3.1.0"
+  }
 }
