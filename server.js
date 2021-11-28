@@ -3,7 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 
-import { genRandomImage } from "./mixComponents.js";
+import { generateRandomImage } from "./mixComponents.js";
 import { NFTStorage, File } from "nft.storage";
 
 const app = express();
@@ -14,7 +14,7 @@ const apiKey = process.env.NFT_STORAGE_API_KEY;
 const client = new NFTStorage({ token: apiKey });
 
 app.get("/first", async (req, res) => {
-  await genRandomImage();
+  await generateRandomImage();
   var characterId = req.query.characterId;
   var characterName = "Character #" + characterId;
   console.log("Character name: " + characterName);
@@ -23,11 +23,11 @@ app.get("/first", async (req, res) => {
   speed += parseInt(Math.random() * 51);
   console.log("Speed: " + speed);
 
-  const imgdata = fs.readFileSync("character.png");
+  const imgdata = fs.readFileSync("randomCharacter.png");
   const metadata = await client.store({
     name: characterName,
     description: "A plane that is on an accelerating adventure",
-    image: new File([imgdata], "character.png", { type: "image/png" }),
+    image: new File([imgdata], "randomCharacter.png", { type: "image/png" }),
     attributes: [{ trait_type: "speed", value: speed }],
   });
 
