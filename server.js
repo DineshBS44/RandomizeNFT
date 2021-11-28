@@ -16,7 +16,7 @@ const client = new NFTStorage({ token: apiKey });
 app.get("/first", async (req, res) => {
   await generateRandomImage();
   var characterId = req.query.characterId;
-  var characterName = "Character #" + characterId;
+  var characterName = "Plane #" + characterId;
   console.log("Character name: " + characterName);
 
   var speed = parseInt(req.query.score);

@@ -5,7 +5,7 @@ var components = ["body", "collar", "helmet", "plane", "propeller"];
 var file_extension = ".png";
 var total_components = components.length;
 
-var num_images_per_component = [4, 4, 4, 4, 4];
+var num_images_per_component = [7, 7, 7, 7, 7];
 
 generateRandomImage();
 
