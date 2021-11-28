@@ -21,7 +21,11 @@
 
 ![PlaneRush](screenshots/image_components.png)
 
-✔️ The NFT metadata is a `JSON` file which comprises of a name, description, image URL and some traits(airSpeed of the Plane in this case). This metadata is stored in `Filecoin` and `IPFS` using `nft.storage`. It is a free decentralized off-chain storage of NFT data. After uploading the JSON to `nft.storage`, an IPFS hash is returned which is returned by the API.
+✔️ The NFT metadata is a `JSON` file which comprises of a name, description, image URL and some traits(airSpeed of the Plane in this case). This metadata is stored in `Filecoin` and `IPFS` using `nft.storage`.
+
+![PlaneRush](screenshots/filecoin_ipfs_nft.storage.png)
+
+It is a free decentralized off-chain storage of NFT data. After uploading the JSON to `nft.storage`, an IPFS hash is returned which is returned by the API.
 
 ✔️ `Chainlink Oracles` are used to fetch the data using API calls. The smart contracts are deployed to `Polygon Mumbai` testnet and the suitable Oracle which is used to GET `bytes32` data on-chain is [Linkriver](https://linkriver.io/). Since `bytes32` variable can only hold 32 characters of data, the first endpoint returns the first 31 characters of the IPFS hash. We had to optimize the API to create a second endpoint which contains the next 28 characters of the IPFS hash.
 
