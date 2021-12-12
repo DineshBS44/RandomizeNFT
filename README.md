@@ -3,8 +3,6 @@
 ![PlaneRush](screenshots/plane_rush_bg_not_sharp.png)
 
 > A Custom API which returns Random NFT images along with some metadata through an IPFS Hash
-
-<h6>Built at the Chainlink Hackathon 2021</h6>
 <br />
 
 ## About the API
